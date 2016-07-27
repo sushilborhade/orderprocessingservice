@@ -56,6 +56,38 @@ public class OrderBOImplTest {
 		Order order = new Order();
 		when(dao.create(order)).thenThrow(SQLException.class);
 		
-		boolean result = bo.placeOrder(order);
+		bo.placeOrder(order);
+	}
+
+	@Test
+	public void cancelOrder() throws SQLException, BOException{
+		Order order = new Order();
+		when(dao.read(123)).thenReturn(order);
+		when(dao.update(order)).thenReturn(1);
+		boolean result = bo.cancelOrder(123);
+		assertTrue(result);
+	}
+
+	@Test
+	public void cancelOrder_Should_Not_Cancel_The_Order() throws SQLException, BOException{
+		Order order = new Order();
+		when(dao.read(123)).thenReturn(order);
+		when(dao.update(order)).thenReturn(0);
+		boolean result = bo.cancelOrder(123);
+		assertFalse(result);
+	}
+
+	@Test(expected = BOException.class)
+	public void cancelOrder_Should_Throw_BOExcetion_On_Read() throws SQLException, BOException{
+		when(dao.read(123)).thenThrow(SQLException.class);
+		boolean cancelOrder = bo.cancelOrder(123);
+		assertTrue(cancelOrder);
+	}
+
+	@Test(expected = BOException.class)
+	public void testSetName_Throw_Exception_When_Name_Is_Null() throws BOException{
+		String name = null;
+		when(bo.setName(name)).thenThrow(BOException.class);
+		
 	}
 }

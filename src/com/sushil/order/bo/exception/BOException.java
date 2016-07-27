@@ -10,4 +10,8 @@ public class BOException extends Exception {
 		super(e);
 	}
 
+	public BOException(String string) {
+		super(string);
+	}
+
 }
