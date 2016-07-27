@@ -28,37 +28,37 @@ public class StudentTest {
 		when(STUDENT.getFirstName()).thenThrow(IllegalArgumentException.class);
 	}
 
-	@Test
+//	@Test
 	public void testSetFirstName() {
 		fail("Not yet implemented");
 	}
 
-	@Test
+//	@Test
 	public void testGetLastName() {
 		fail("Not yet implemented");
 	}
 
-	@Test
+//	@Test
 	public void testSetLastName() {
 		fail("Not yet implemented");
 	}
 
-	@Test
+//	@Test
 	public void testGetAddress() {
 		fail("Not yet implemented");
 	}
 
-	@Test
+//	@Test
 	public void testSetAddress() {
 		fail("Not yet implemented");
 	}
 
-	@Test
+//	@Test
 	public void testGetAge() {
 		fail("Not yet implemented");
 	}
 
-	@Test
+//	@Test
 	public void testSetAge() {
 		fail("Not yet implemented");
 	}

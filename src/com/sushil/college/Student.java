@@ -8,8 +8,8 @@ public class Student {
 	int age;
 	public String getFirstName() {
 		//My business logic
-		return firstName;
-//		throw new IllegalArgumentException("Method not supported.");
+//		return firstName;
+		throw new IllegalArgumentException("Method not supported.");
 	}
 	public void setFirstName(String firstName) {
 		throw new IllegalArgumentException("Method not supported.");
