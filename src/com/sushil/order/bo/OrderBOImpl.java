@@ -63,9 +63,9 @@ public class OrderBOImpl implements OrderBO {
 	}
 
 	public String setName(String name) throws BOException{
-		if(name == null){
-			throw new BOException("Name cannot be null");
-		}
+//		if(name == null){
+//			throw new BOException("Name cannot be null");
+//		}
 		return name;
 	}
 }
