@@ -28,7 +28,7 @@ public class StudentTest {
 		when(STUDENT.getFirstName()).thenThrow(IllegalArgumentException.class);
 	}
 
-//	@Test
+	@Test
 	public void testSetFirstName() {
 		fail("Not yet implemented");
 	}
